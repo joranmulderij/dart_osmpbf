@@ -52,4 +52,3 @@ const BlobHeader$json = {
 final $typed_data.Uint8List blobHeaderDescriptor = $convert.base64Decode(
     'CgpCbG9iSGVhZGVyEhIKBHR5cGUYASACKAlSBHR5cGUSHAoJaW5kZXhkYXRhGAIgASgMUglpbm'
     'RleGRhdGESGgoIZGF0YXNpemUYAyACKAVSCGRhdGFzaXpl');
-
