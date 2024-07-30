@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='-25358' action='modify' visible='true' lat='56.55957935158' lon='-33.75017578125' />
+  <node id='-25359' action='modify' visible='true' lat='57.04082547075' lon='-21.44548828125' />
+  <node id='-25360' action='modify' visible='true' lat='51.50885186408' lon='-19.16033203125' />
+  <node id='-25361' action='modify' visible='true' lat='51.06912711756' lon='-32.87126953125' />
+  <node id='-25363' action='modify' visible='true' lat='55.4913160764' lon='-30.52004150391' />
+  <node id='-25364' action='modify' visible='true' lat='55.93690707605' lon='-23.66457275391' />
+  <node id='-25365' action='modify' visible='true' lat='54.44450454027' lon='-27.20217041016' />
+  <node id='-25366' action='modify' visible='true' lat='53.60555713651' lon='-23.77443603516' />
+  <node id='-25367' action='modify' visible='true' lat='53.40954495079' lon='-30.14650634766' />
+  <node id='-25368' action='modify' visible='true' lat='54.71194154174' lon='-29.70705322266'>
+    <tag k='name' v='Nice Hotel' />
+    <tag k='tourism' v='hotel' />
+  </node>
+  <node id='-25372' action='modify' visible='true' lat='55.80129332124' lon='-22.69777587891' />
+  <node id='-25373' action='modify' visible='true' lat='55.11609710638' lon='-23.51076416016' />
+  <node id='-25374' action='modify' visible='true' lat='54.50833925728' lon='-23.46681884766' />
+  <node id='-25375' action='modify' visible='true' lat='54.3933650167' lon='-24.54347900391' />
+  <node id='-25376' action='modify' visible='true' lat='54.95239830858' lon='-24.87306884766' />
+  <node id='-25377' action='modify' visible='true' lat='55.27912780718' lon='-24.27980712891' />
+  <way id='-579' action='modify' visible='true'>
+    <nd ref='-25358' />
+    <nd ref='-25359' />
+    <nd ref='-25360' />
+    <nd ref='-25361' />
+    <nd ref='-25358' />
+    <tag k='name' v='The Great Water' />
+    <tag k='natural' v='water' />
+  </way>
+  <way id='-584' action='modify' visible='true'>
+    <nd ref='-25363' />
+    <nd ref='-25364' />
+    <nd ref='-25365' />
+    <nd ref='-25366' />
+    <nd ref='-25367' />
+    <tag k='highway' v='primary' />
+  </way>
+  <way id='-614' action='modify' visible='true'>
+    <nd ref='-25372' />
+    <nd ref='-25373' />
+    <nd ref='-25374' />
+    <nd ref='-25375' />
+    <nd ref='-25376' />
+    <nd ref='-25377' />
+    <tag k='highway' v='tertiary' />
+  </way>
+  <relation id='-124' action='modify' visible='true'>
+    <member type='node' ref='-25364' role='' />
+    <member type='node' ref='-25366' role='' />
+    <member type='node' ref='-25377' role='' />
+    <member type='node' ref='-25368' role='' />
+    <member type='node' ref='-25373' role='' />
+    <member type='node' ref='-25375' role='' />
+    <member type='node' ref='-25363' role='' />
+    <member type='node' ref='-25372' role='' />
+    <member type='node' ref='-25365' role='' />
+    <member type='node' ref='-25374' role='' />
+    <member type='node' ref='-25367' role='' />
+    <member type='node' ref='-25376' role='' />
+    <member type='way' ref='-584' role='' />
+    <member type='way' ref='-614' role='' />
+    <tag k='name' v='Ocean Features' />
+  </relation>
+</osm>
