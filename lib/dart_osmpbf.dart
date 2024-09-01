@@ -43,6 +43,7 @@ OsmData _parseOsmData(Uint8List data_) {
           throw Exception('Changesets not supported');
         }
         if (primitiveGroup.nodes.isNotEmpty) {
+          throw Exception('Nodes not supported');
           for (final node in primitiveGroup.nodes) {
             final id = node.id.toInt();
             final lat = 1e-9 * (latOffset + granularity * node.lat.toInt());
@@ -57,9 +58,13 @@ OsmData _parseOsmData(Uint8List data_) {
           }
         }
         if (primitiveGroup.ways.isNotEmpty) {
+          var refDelta = 0;
           for (final way in primitiveGroup.ways) {
             final id = way.id.toInt();
-            final refs = way.refs.map((ref) => ref.toInt()).toList();
+            final refs = way.refs.map((ref) {
+              refDelta += ref.toInt();
+              return refDelta;
+            }).toList();
             final tags = _parseParallelTags(way.keys, way.vals, stringTable);
             ways.add(OsmWay(
               id: id,
@@ -94,10 +99,14 @@ OsmData _parseOsmData(Uint8List data_) {
         if (primitiveGroup.dense.id.isNotEmpty) {
           final dense = primitiveGroup.dense;
           var id = 0;
+          var latDelta = 0;
+          var lonDelta = 0;
           for (var i = 0; i < dense.id.length; i++) {
             id += dense.id[i].toInt();
-            final lat = 1e-9 * (latOffset + granularity * dense.lat[i].toInt());
-            final lon = 1e-9 * (lonOffset + granularity * dense.lon[i].toInt());
+            latDelta += dense.lat[i].toInt();
+            lonDelta += dense.lon[i].toInt();
+            final lat = 1e-9 * (latOffset + granularity * latDelta);
+            final lon = 1e-9 * (lonOffset + granularity * lonDelta);
             final tags = <String, String>{};
             final keyVals = dense.keysVals;
             while (dense.keysVals[j] != 0) {
